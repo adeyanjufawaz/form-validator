@@ -138,7 +138,14 @@ function validateNumber () {
     DOMstrings["number"].style.borderColor = "var(--color-sec)"
     DOMstrings["emptyNumber"].style.display = "none"
   }
-  
+  numberRegex = /[0-9]{11}/g
+  if (DOMstrings["number"].value !== "" && numberRegex.test(DOMstrings["number"].value) == false)  {
+    DOMstrings["number"].style.borderColor = "red"
+    document.querySelector("#invalidNumber").style.display = "block"
+  }else{
+    DOMstrings["number"].style.borderColor = "var(--color-sec)"
+    document.querySelector("#invalidNumber").style.display = "none"
+  }
 }
 
 setInterval(validateNetworkProvider,);
@@ -151,7 +158,7 @@ function validatePassword () {
   } else{
     DOMstrings["password"].style.borderColor = "var(--color-sec)"
     DOMstrings["emptyPassword"].style.display = "none"
-  }
+  }    
 }
 
 function validateConfirmPassword () {
@@ -171,8 +178,6 @@ function validateNetworkProvider () {
     glo: /^(0805|0807|0811|0815|0705|0905)\d{7}$/,
     etisalat: /^(0809|0817|0818|0908|0909)\d{7}$/
   }
-
-  console.log(DOMstrings["number"].value.length);
 
   switch (true) {
   case networkProvidersPrefix["airtel"].test(DOMstrings["number"].value):
