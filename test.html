@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+   <nav class="header">
+        <h1 class="header--text">Circle 135</h1>
+        <div class="login-signup--box">
+            <a href="#" class="btn" id="login--btn">Log in</a>
+            <a href="#" class="btn">Sign up</a>
+        </div>
+   </nav>
+   <h2 class="sec--header">Student Registration</h2>
+   <form action="" class="form-1">
+
+        <div class="form__input">
+            <input type="text" placeholder="First name" class="form-1__input" id="firstname">
+            <div class="form__input--icon-box"><i class="fa fa-user"></i></div>
+        </div>
+        <p class="empty" id="empty---firstName">Required input</p>
+
+
+        <div class="form__input">
+            <input type="text" placeholder="Last name" class="form-1__input" id="lastname">
+            <div class="form__input--icon-box"><i class="fa fa-user-circle"></i></div>
+        </div>
+        <p class="empty" id="empty---lastName">Required input</p>
+
+
+        <div class="form__input">
+            <input type="text" placeholder="E-mail" class="form-1__input" id="email">
+            <div class="form__input--icon-box"><i class="fa fa-envelope"></i></div>
+        </div>
+        <p class="empty" id="empty---email">Required input</p>
+        <p class="empty" id="emailError">Enter a valid email address</p>
+
+
+        <div class="form__input">
+            <select name="gender" class="gender">
+                <option value="gender" selected disabled>Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <div class="form__input--icon-box"><i class="fa-solid fa-children"></i></div>
+        </div>
+        <p class="empty" id="empty--gender">Select a gender</p>
+
+
+        <div class="form__input">
+            <input type="text" placeholder="Phone number" class="form-1__input" id="number">
+            <div class="form__input--icon-box"><i class="fa-solid fa-phone-flip"></i></div>
+            <img src="img/airtel.png" alt="" class="network--logo airtel">
+            <img src="img/9mobile.jpeg" alt="" class="network--logo etisalat">
+            <img src="img/glo.jpeg" alt="" class="network--logo glo">
+            <img src="img/mtn.png" alt="" class="network--logo mtn">
+        </div>
+        <p class="empty" id="empty---number">Required input</p>
+
+
+
+        <div class="form__input">
+            <input type="password" placeholder="Password" class="form-1__input" id="password">
+            <div class="form__input--icon-box"><i class="fa-solid fa-key"></i></div>
+            <div class="form__input--eye-box" id="open-eye"><i class="fa-solid fa-eye"></i></div>
+            <div class="form__input--eye-box" id="close-eye"><i class="fa-solid fa-eye-slash"></i></div>
+        </div>
+        <p class="empty" id="empty---password">Required input</p>
+
+
+        <div class="form__input">
+            <input type="password" placeholder="Confirm password" class="form-1__input" id="confirm--password">
+            <div class="form__input--icon-box"><i class="fa-solid fa-key"></i></div>
+        </div>
+        <p class="empty" id="empty---confirmPassword">Required input</p>
+        <p class="empty" id="confirmPasswordError">Password does not match</p>
+
+
+        <button id="form--submit">Submit</button>
+        
+   </form>
+   
+   <script src="test.js"></script>
+</body>
+</html>
